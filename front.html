@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="front.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Rajdhani:wght@500;600&family=Montserrat:wght@400;500&display=swap">
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    <!-- <script
+    //   gsap.to("body", {
+        // backgroundColor: "#ff758c",
+        // duration: 3,
+        // repeat: -1,
+        // yoyo: true,
+    //   });
+    // </script>-->
+  </head>
+  <body><section class="about" id="about">
+    <div class="container">
+      <div class="logo-container">
+        <h1 id="kanak-logo">
+          <span id="k">K</span>
+
+          <span class="letters" style="color: #00bfff;">D</span>
+        </h1>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="script.js"></script>
+      <nav>
+        <ul>
+          <li class="glass-interactive" style="color:#00ffd0">
+            <a href="#about" style="color:#00ffd0">About</a>
+          </li>
+          <li class="glass-interactive" style="color:#00ffd0">
+            <a href="#skills" style="color:#00ffd0">Skills</a>
+          </li>
+          <li class="glass-interactive" style="color:#00ffd0">
+            <a href="#project" style="color:#00ffd0">projects</a>
+          </li>
+          <li class="glass-interactive" style="color:#00ffd0">
+            <a href="#services" style="color:#00ffd0">services</a>
+          </li>
+          <li class="glass-interactive" style="color:#00ffd0">
+            <a href="#contact" style="color:#00ffd0">contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <div>
+          <div class="profile-pic" style="animation: floatProfile 2.5s ease-in-out infinite alternate;">
+            <img src="kdprofile.jpg" alt="Profile Picture" />
+          </div>
+        </div>
+        <style>
+          @keyframes floatProfile {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(-18px);}
+          }
+        </style>
+
+        <div class="intro">
+            
+          <h1 class="typewriter" style="font-size: 38px;">Hello, my name is <span class="name">Kanak Dhiman</span></h1>
+          <h2 class="typewriter-text" style="font-size: 34px; color: #d3d9dd;"></h2>
+          <script>
+            const ed = document.querySelector(".typewriter-text");
+            const phrases = [
+                " I am a Web Developer & Designer",
+              "I design sleek, animated websites",
+              "Let’s create something extraordinary",
+            ];
+
+            let phraseIndex = 0;
+            let letterIndex = 0;
+            let isDeleting = false;
+
+            function loopTypewriter() {
+              let currentPhrase = phrases[phraseIndex];
+              let currentText = currentPhrase.substring(0, letterIndex);
+
+              ed.textContent = currentText;
+
+              if (!isDeleting && letterIndex < currentPhrase.length) {
+                letterIndex++;
+                setTimeout(loopTypewriter, 100);
+              } else if (isDeleting && letterIndex > 0) {
+                letterIndex--;
+                setTimeout(loopTypewriter, 50);
+              } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                  phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+                setTimeout(loopTypewriter, 1000);
+              }
+            }
+
+            loopTypewriter();
+          </script>
+          
+          <h2>
+           
+          </h2>
+
+          <p class="slide-in-onload">
+            A Computer Science and Engineering student with a passion for
+            technology, creativity, and continuous learning. I’m currently
+            focused on web development and UI/UX design using Figma. Alongside,
+            I’ve recently started my journey into Artificial Intelligence and
+            Machine Learning, exploring how intelligent systems work and how
+            they can solve real-world problems. I enjoy building meaningful
+            digital experiences and love diving into new challenges that help me
+            grow as a developer and designer.
+          </p>
+          <script>
+            window.addEventListener("pageshow", () => {
+  const ed = document.querySelector(".slide-in-onload");
+  ed.classList.remove("slide-in-onload");
+  void ed.offsetWidth; // trigger reflow
+  ed.classList.add("slide-in-onload");
+});
+  </script>
+         <a href="#project"> <button class="more-btn" class="glass-interactive">View My Work</button></a>
+        </div>
+      </main>
+    </div></section>
+    
+    <section class="skills" id="skills">
+      <aside class="laser-heading-container">
+        <h1 class="laser-heading" style="text-align: center; font-family: 'Orbitron', 'Montserrat', sans-serif; font-size: 2.2rem; color: #00ffd0; letter-spacing: 2px; margin-bottom: 24px; margin-top: 32px; position: relative; animation: techyGlow 1.5s ease-in-out infinite alternate; background: linear-gradient(90deg, #00ffd0 30%, #00bfff 70%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">My Skills</h1>
+        <span class="laser-beam"></span>
+        
+      </aside>
+      <div class="skill-categories">
+        <div class="skill-box">
+          <h2>Frontend Development</h2>
+          <div class="skill-items">
+            <div class="skill" class="particle">
+              <img
+                src="360_F_578113446_j72wZX7u698eoV50XXmkLMH7gGuNhpVB.jpg"
+                alt="HTML"
+              />HTML
+            </div>
+            <div class="skill" class="particle">
+              <img
+                src="css.jpg"
+                alt="CSS3 logo in blue and white shield shape with stylized number 3, representing web styling technology, on a transparent background"
+              />CSS
+            </div>
+            <div class="skill" class="particle">
+              <img src="jslogo.png" alt="JavaScript" />JavaScript
+            </div>
+            <div class="skill" class="particle">
+              <img src="bootstrp.png" alt="Bootstrap" />Bootstrap
+            </div>
+            <div class="skill" class="particle">
+              <img src="tailwind.png" alt="Tailwind CSS" />Tailwind CSS
+            </div>
+            <div class="skill" class="particle">
+              <img src="react.svg" alt="React.js" />React.js
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h2>Backend Development</h2>
+          <div class="skill-items">
+            <div class="skill">
+              <img src="nodejs.png" alt="Node.js" />Node.js
+            </div>
+            <div class="skill">
+              <img src="expressjs.png" alt="Express.js" />Express.js
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h2>Database</h2>
+          <div class="skill-items">
+            <div class="skill">
+              <img src="mongodb.jpg" alt="MongoDB" />MongoDB
+            </div>
+            <div class="skill">
+              <img src="mongoose.png" alt="Mongoose" />Mongoose
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h2>Designing Tools</h2>
+          <div class="skill-items">
+            <div class="skill"><img src="figma.png" alt="Figma" />Figma</div>
+            <div class="skill"><img src="canva.jpg" alt="Canva" />Canva</div>
+          </div>
+        </div>
+     <!--div class="skill-box">
+          <h2>Programming</h2>
+          <div class="skill-items">
+            <div class="skill"><img src="python.jpg" alt="Python" />Python</div>
+          </div>
+        </div>--></div>
+    </section>
+      
+    <!--<section class="projects">
+      <h1>My Projects</h1>
+      <div class="slider">
+        <button class="prev">&#10094;</button>
+        <div class="project-container">
+          <div class="project-box left">
+            <img src="booksetu2.jpg"BookSetu" />
+            <div class="project-info">
+              <h2>BookSetu</h2>
+              <p>BookSetu is a student-friendly platform that makes buying, selling, and renting books easier than ever.</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+
+          <div class="project-box right">
+            <img src="pf.jpg"Portfolio Builder" />
+            <div class="project-info">
+              <h2>Portfolio Builder</h2>
+              <p>A dynamic portfolio creator using html css js gsap and more feautures like it.</p>
+              <button class="view-btn">View Project</button>
+            </div>
+          </div>
+
+          <div class="project-box left">
+            <img src="uifgma.jpg" />
+
+            <!-- Add this after the last project-box, before the closing .project-container div -->
+            <!-- New Dynamic Animated Slider for Projects -->
+             <section class="projects" id="project">
+            <h1 class="projects-heading">My Projects</h1>
+            <div class="dynamic-slider">
+              <div class="dynamic-slider-track">
+              <div class="dynamic-slide">
+                <img src="booksetu2.jpg" alt="BookSetu" />
+                <div class="dynamic-info">
+                <h2>BookSetu</h2>
+                <p>BookSetu is a student-friendly platform that makes buying, selling, and renting books easier than ever.</p>
+                <a href="https://github.com/kanak2004140/booksetu"><button class="dynamic-view-btn">View Project</button></a>
+                </div>
+              </div>
+              <div class="dynamic-slide">
+                <img src="pf.jpg" alt="Portfolio Builder" />
+                <div class="dynamic-info">
+                <h2>Portfolio Builder</h2>
+                <p>A dynamic portfolio creator using html css js gsap and more features like it.</p>
+                
+                <a href=""><button class="dynamic-view-btn">View Project</button></a>
+                </div>
+              </div>
+              <div class="dynamic-slide">
+                <img src="uifgma.jpg" alt="Figma UI" />
+                <div class="dynamic-info">
+                <h2>Figma UI</h2>
+                <p>UI of a financial website by using Figma</p>
+               <a href="https://www.figma.com/proto/3KrZ9aWvBYQDx7tPDGa4Uk/Untitled?node-id=9-39&t=JMQdZ350kEzixT5d-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A53"><button class="dynamic-view-btn">View Project</button></a>
+                </div>
+              </div>
+              <div class="dynamic-slide">
+                <img src="devlabs.jpg" alt="DevLabs UI" />
+                <div class="dynamic-info">
+                <h2>DevLabs UI</h2>
+                <p>User interface of a website <b>DevLabs</b></p>
+                <a href="https://www.figma.com/proto/kW0nANuo9gZe3SyybLjFF7/DevLabs?node-id=378-18894&p=f&t=Ma1XKfJZTbQy27C6-1&scaling=min-zoom&content-scaling=fixed&page-id=176%3A77"><button class="dynamic-view-btn">View Project</button></a>
+                </div>
+              </div>
+              </div>
+              <button class="dynamic-slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="dynamic-slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+              <div class="dynamic-slider-dots"></div>
+            </div>
+            <style>
+            .projects-heading {
+              text-align: center;
+              font-family: 'Orbitron', 'Montserrat', sans-serif;
+              font-size: 2.6rem;
+              color: #00ffd0;
+              letter-spacing: 2px;
+              margin-bottom: 24px;
+              margin-top: 32px;
+              position: relative;
+              animation: techyGlow 1.5s ease-in-out infinite alternate;
+              background: linear-gradient(90deg, #00ffd0 30%, #00bfff 70%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            @keyframes techyGlow {
+              0% { text-shadow: 0 0 2px #00ffd0, 0 0 4px #00ffd022; }
+              100% { text-shadow: 0 0 8px #00ffd0, 0 0 12px #00bfff33; }
+            }
+            </style>
+            <!-- Dynamic Slider Styles -->
+            <style>
+            .dynamic-slider {
+              position: relative;
+              max-width: 700px;
+              margin: 40px auto 0 auto;
+              overflow: hidden;
+              border-radius: 24px;
+              box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+              background: rgba(255,255,255,0.12);
+               background-color: rgba(0, 0, 0, 0.5);
+  /* transform: translateY(-10px) scale(1.1); */
+  box-shadow: 0px 6px 15px rgba(66, 113, 141,0.8);
+              backdrop-filter: blur(8px);
+            }
+            .dynamic-slider-track {
+              display: flex;
+              transition: transform 0.8s cubic-bezier(.77,0,.18,1);
+              will-change: transform;
+            }
+            .dynamic-slide {
+              min-width: 100%;
+              box-sizing: border-box;
+              padding: 32px 24px 24px 24px;
+              display: flex;
+              align-items: center;
+              gap: 32px;
+              opacity: 0.7;
+              transform: scale(0.96);
+              transition: opacity 0.5s, transform 0.5s;
+            }
+            .dynamic-slide.active {
+              opacity: 1;
+              transform: scale(1.03);
+              z-index: 2;
+            }
+            .dynamic-slide img {
+              width: 180px;
+              height: 180px;
+              object-fit: cover;
+              border-radius: 18px;
+              box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+              border: 3px solid #00ffd0;
+              background: #fff;
+              animation: floatImg 2.5s ease-in-out infinite alternate;
+            }
+            @keyframes floatImg {
+              0% { transform: translateY(0);}
+              100% { transform: translateY(-12px);}
+            }
+            .dynamic-info {
+              flex: 1;
+              color: #222;
+              font-family: 'Montserrat', 'Rajdhani', sans-serif;
+            }
+            .dynamic-info h2 {
+              font-size: 2rem;
+              margin-bottom: 8px;
+              color: #00ffd0;
+              letter-spacing: 1px;
+              font-family: 'Orbitron', 'Montserrat', sans-serif;
+            }
+            .dynamic-info p {
+              font-size: 1.08rem;
+              margin-bottom: 18px;
+              color: #ffffff;
+            }
+            .dynamic-view-btn {
+              background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
+              color: #222;
+              border: none;
+              padding: 10px 28px;
+              border-radius: 30px;
+              font-weight: 700;
+              font-size: 1rem;
+              box-shadow: 0 2px 12px rgba(0,255,208,0.13);
+              cursor: pointer;
+              transition: background 0.3s, transform 0.2s;
+              outline: none;
+            }
+            .dynamic-view-btn:hover {
+              background: linear-gradient(90deg, #00bfff 0%, #00ffd0 100%);
+              transform: scale(1.07);
+            }
+            .dynamic-slider-btn {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              background: rgba(0,255,208,0.18);
+              border: none;
+              color: #00ffd0;
+              font-size: 2rem;
+              border-radius: 50%;
+              width: 48px;
+              height: 48px;
+              cursor: pointer;
+              z-index: 10;
+              box-shadow: 0 2px 12px rgba(0,255,208,0.13);
+              transition: background 0.2s, color 0.2s, transform 0.2s;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .dynamic-slider-btn.prev { left: 18px; }
+            .dynamic-slider-btn.next { right: 18px; }
+            .dynamic-slider-btn:hover {
+              background: #00ffd0;
+              color: #222;
+              transform: scale(1.13);
+            }
+            .dynamic-slider-dots {
+              position: absolute;
+              bottom: 18px;
+              left: 50%;
+              transform: translateX(-50%);
+              display: flex;
+              gap: 10px;
+            }
+            .dynamic-slider-dots span {
+              display: block;
+              width: 12px;
+              height: 12px;
+              background: #00ffd0;
+              opacity: 0.4;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: opacity 0.2s, transform 0.2s;
+            }
+            .dynamic-slider-dots span.active {
+              opacity: 1;
+              transform: scale(1.2);
+              box-shadow: 0 0 8px #00ffd0;
+            }
+            @media (max-width: 600px) {
+              .dynamic-slide { flex-direction: column; gap: 18px; padding: 18px 6px; }
+              .dynamic-slide img { width: 120px; height: 120px; }
+              .dynamic-info h2 { font-size: 1.2rem; }
+            }
+            </style>
+            <!-- Dynamic Slider Script -->
+            <script>
+            (function(){
+              const slides = document.querySelectorAll('.dynamic-slide');
+              const track = document.querySelector('.dynamic-slider-track');
+              const prevBtn = document.querySelector('.dynamic-slider-btn.prev');
+              const nextBtn = document.querySelector('.dynamic-slider-btn.next');
+              const dotsContainer = document.querySelector('.dynamic-slider-dots');
+              let current = 0, timer = null, animating = false;
+
+              // Dots
+              slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+              });
+              const dots = dotsContainer.querySelectorAll('span');
+
+              function update() {
+                slides.forEach((slide, i) => {
+                  slide.classList.toggle('active', i === current);
+                });
+                dots.forEach((dot, i) => {
+                  dot.classList.toggle('active', i === current);
+                });
+                track.style.transform = `translateX(-${current * 100}%)`;
+              }
+              function goTo(idx) {
+                if (animating || idx === current) return;
+                animating = true;
+                current = (idx + slides.length) % slides.length;
+                update();
+                setTimeout(()=>{ animating = false; }, 600);
+                resetTimer();
+              }
+              function next() { goTo(current + 1); }
+              function prev() { goTo(current - 1); }
+              function resetTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(next, 4000);
+              }
+              prevBtn.addEventListener('click', prev);
+              nextBtn.addEventListener('click', next);
+
+              // Animate in on load
+              setTimeout(() => {
+                slides[0].classList.add('active');
+                update();
+                resetTimer();
+              }, 200);
+
+              // Pause on hover
+              track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+              track.parentElement.addEventListener('mouseleave', resetTimer);
+            })();
+            </script>
+            
+    </section>
+    <section class="services" id="services">
+      <h1 class="services-heading">My Services</h1>
+      <div class="service-container">
+      <!-- Web Designing -->
+      <div class="service-box">
+        <img
+        src="webdesigninglogo.png"
+        alt="Web Designing"
+        style="color: rgba(0, 255, 127, 0.8)"
+        />
+        <h2>Web Designing</h2>
+        <p>
+        Crafting visually stunning and highly functional websites with
+        modern design principles.
+        </p>
+      </div>
+
+      <!-- UI/UX Designing -->
+      <div class="service-box">
+        <img src="figmaservice.jpg" alt="">
+        <h2>UI/UX Designing</h2>
+        <p>
+        Creating intuitive and engaging user experiences with a focus on
+        usability and aesthetics.
+        </p>
+      </div>
+
+      <!-- Logo Designing -->
+      <div class="service-box">
+        <img src="logodesigner.jpg" alt="Logo Designing" />
+        <h2>Logo Designing</h2>
+        <p>
+        Designing unique and memorable brand identities that leave a lasting
+        impression.
+        </p>
+      </div>
+      </div>
+      <style>
+      .services-heading {
+        text-align: center;
+        font-family: 'Orbitron', 'Montserrat', sans-serif,'rajdhani', sans-serif;
+        font-size: 2.2rem;
+        color: #00ffd0;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+        margin-top: 32px;
+        position: relative;
+        animation: techyGlow 1.5s ease-in-out infinite alternate;
+        background: linear-gradient(90deg, #00ffd0 30%, #00bfff 70%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .service-container {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .service-box {
+        background: rgba(255,255,255,0.13);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,255,208,0.10);
+        padding: 32px 24px;
+        width: 270px;
+        min-height: 320px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        opacity: 0;
+        /* transform: scale(0.92) translateY(30px); */
+      
+        position: relative;
+        z-index: 1;
+          background-color: rgba(0, 0, 0, 0.5);
+  /* transform: translateY(-10px) scale(1.1); */
+  box-shadow: 0px 6px 15px rgba(66, 113, 141, 0.8);
+
+  padding: 20px;
+  border-radius: 8px;
+  gap: 70px;
+  width: 20vw;
+  animation: floatImg 1.5s ease-in-out infinite alternate;
+      }
+      .service-box:hover {
+        /* transform: scale(1.04) translateY(-6px); */
+        box-shadow: 0px 10px 25px rgba(64, 95, 168, 0.8);
+      }
+      .service-box img, .service-box i {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0,255,208,0.10);
+        font-size: 3.2rem;
+        color: #00ffd0;
+        display: inline-block;
+        padding: 8px;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+        border: 3px solid #00ffd0;
+        background: #070707;
+        animation: floatImg 2.5s ease-in-out infinite alternate;
+      }
+      .service-box h2 {
+        font-size: 1.3rem;
+        color: #00ffd0;
+        margin-bottom: 10px;
+        font-family: 'Orbitron', 'Montserrat', sans-serif;
+      }
+      .service-box p {
+        color: #fcfcfc;
+        font-size: 1.05rem;
+        font-family: 'Montserrat', 'Rajdhani', sans-serif;
+      }
+      @media (max-width: 900px) {
+        .service-container { flex-direction: column; align-items: center; gap: 22px; }
+        .service-box { width: 90%; min-width: 220px; }
+      }
+      </style>
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+        const serviceBoxes = document.querySelectorAll(".service-box");
+        serviceBoxes.forEach((box, i) => {
+          let directionX = (i % 2 === 0) ? 1 : -1;
+          let directionY = (i % 2 === 0) ? 1 : -1;
+          // Animate in on scroll
+          gsap.fromTo(
+            box,
+            { opacity: 0, scale: 0.92, x: directionX * 30, y: directionY * 30 },
+            {
+              scrollTrigger: {
+                trigger: box,
+                start: "top 85%",
+                toggleActions: "play none none none",
+              },
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              y: 0,
+              duration: 1.1,
+              ease: "back.out(1.7)",
+              delay: i * 0.13,
+              onComplete: () => {
+                // Floating animation after entrance
+                gsap.to(box, {
+                  x: directionX * 10,
+                  y: directionY * 10,
+                  repeat: -1,
+                  yoyo: true,
+                  duration: 1.7,
+                  ease: "power1.inOut"
+                });
+              }
+            }
+          );
+        });
+      });
+      </script>
+    </section>
+    <section class="contact" id="contact">
+      <h1 class="contact-heading">Contact Me</h1>
+      <div class="contact-boxes">
+      <a
+          href="https://wa.me/7534825636"
+          class="contact-icon whatsapp"
+          title="WhatsApp"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917534825636" class="contact-icon phone" title="Call">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a
+          href="mailto:kdkanakdhiman1604@gmail"
+          class="contact-icon email"
+          title="Email"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        
+        <a
+          href="https://github.com/kanak2004140"
+          class="contact-icon github"
+          title="GitHub"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kanak-dhiman-a581a62ba"
+          class="contact-icon linkedin"
+          title="LinkedIn"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+      <style>
+        .contact {
+          margin: 60px auto 0 auto;
+          max-width: 700px;
+          background: rgba(255,255,255,0.13);
+          border-radius: 24px;
+          box-shadow: 0 8px 32px rgba(0,255,208,0.10);
+          padding: 40px 24px 32px 24px;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(8px);
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.5);
+  /* transform: translateY(-10px) scale(1.1); */
+  box-shadow: 0px 6px 15px rgba(66, 113, 141, 0.8);
+        }
+        .contact-heading {
+          font-family: 'Orbitron', 'Montserrat', sans-serif;
+          font-size: 2.2rem;
+          color: #00ffd0;
+          letter-spacing: 2px;
+          margin-bottom: 28px;
+          margin-top: 0;
+          animation: techyGlow 1.5s ease-in-out infinite alternate;
+          background: linear-gradient(90deg, #00ffd0 30%, #00bfff 70%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .contact-boxes {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 32px;
+          margin-top: 18px;
+        }
+        .contact-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background: #070707;
+          border: 3px solid #00ffd0;
+          box-shadow: 0 4px 24px rgba(0,255,208,0.10);
+          font-size: 2.6rem;
+          color: #00ffd0;
+          transition: transform 0.22s, box-shadow 0.22s, background 0.22s, color 0.22s;
+          position: relative;
+          cursor: pointer;
+          opacity: 0;
+        }
+        .contact-icon:hover {
+          background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
+          color: #222;
+          transform: scale(1.09) translateY(-6px);
+          box-shadow: 0 8px 32px rgba(0,255,208,0.18);
+          border-color: #00bfff;
+        }
+        .contact-icon.whatsapp { color: #25D366; }
+        .contact-icon.phone { color: #00ffd0; }
+        .contact-icon.email { color: #ffb300; }
+        .contact-icon.insta { color: #e1306c; }
+        .contact-icon.github { color: #fff; }
+        .contact-icon.linkedin { color: #0077b5; }
+        @media (max-width: 600px) {
+          .contact-boxes { gap: 16px; }
+          .contact-icon { width: 60px; height: 60px; font-size: 1.5rem; }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          gsap.registerPlugin(ScrollTrigger);
+          const icons = document.querySelectorAll(".contact-icon");
+          icons.forEach((icon, i) => {
+            gsap.fromTo(
+              icon,
+              { opacity: 0, scale: 0.8, y: 30 },
+              {
+                scrollTrigger: {
+                  trigger: icon,
+                  start: "top 90%",
+                  toggleActions: "play none none none",
+                },
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.9,
+                ease: "back.out(1.7)",
+                delay: i * 0.10,
+                onComplete: () => {
+                  gsap.to(icon, {
+                    y: 8 * ((i % 2) ? 1 : -1),
+                    repeat: -1,
+                    yoyo: true,
+                    duration: 1.5 + i * 0.1,
+                    ease: "power1.inOut"
+                  });
+                }
+              }
+            );
+          });
+        });
+      </script>
+    </section>
+    <script src="script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+    const skillBoxes = document.querySelectorAll(".skill-box");
+    // Animate skill boxes: 2 slide right, 2 slide left, alternate, overlap at center
+    const slideDistance = 20;
+    const slideYDistance = 20;
+
+    skillBoxes.forEach((box, i) => {
+      // Animate in on scroll
+      gsap.fromTo(
+        box,
+        { opacity: 0, scale: 0.92, y: 30 },
+        {
+          scrollTrigger: {
+            trigger: box,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 1.1,
+          ease: "back.out(1.7)",
+          delay: i * 0.13,
+          onComplete: () => {
+            // Floating animation after entrance
+            let directionX = (i % 4 === 0 || i % 4 === 2) ? 1 : -1;
+            let directionY = (i % 4 === 0 || i % 4 === 1) ? 1 : -1;
+            gsap.to(box, {
+              x: directionX * slideDistance,
+              y: directionY * slideYDistance,
+              repeat: -1,
+              yoyo: true,
+              duration: 1.2,
+              ease: "power1.inOut"
+            });
+          }
+        }
+      );
+        });
+      });
+        </script>
+        <!--<footer class="footer">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <span class="footer-logo-k">K</span><span class="footer-logo-d">D</span>
+            </div>
+            <div class="footer-socials">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:youremail@example.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+              <a href="https://wa.me/your-number" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-links">
+              <a href="#">About</a>
+              <a href="#">Skills</a>
+              <a href="#">Projects</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+            </div>
+            <div class="footer-copy">
+              &copy; 2024 Kanak Dhiman. All rights reserved.
+            </div>
+          </div>
+          <style>
+            .footer {
+              background: linear-gradient(90deg, #070707 60%, #00ffd0 100%);
+              color: #00ffd0;
+              padding: 38px 0 18px 0;
+              margin-top: 60px;
+              font-family: 'Montserrat', 'Orbitron', 'Rajdhani', sans-serif;
+              box-shadow: 0 -4px 24px rgba(0,255,208,0.10);
+              position: relative;
+              z-index: 2;
+            }
+            .footer-content {
+              max-width: 900px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 18px;
+            }
+            .footer-logo {
+              font-size: 2.2rem;
+              font-family: 'Orbitron', 'Montserrat', sans-serif;
+              letter-spacing: 2px;
+              font-weight: 700;
+              margin-bottom: 4px;
+              background: linear-gradient(90deg, #00ffd0 30%, #00bfff 70%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              display: flex;
+              align-items: center;
+              gap: 2px;
+            }
+            .footer-logo-k {
+              color: #00ffd0;
+              font-size: 2.3rem;
+              font-family: 'Orbitron', 'Montserrat', sans-serif;
+            }
+            .footer-logo-d {
+              color: #00bfff;
+              font-size: 2.3rem;
+              font-family: 'Orbitron', 'Montserrat', sans-serif;
+            }
+            .footer-socials {
+              display: flex;
+              gap: 22px;
+              margin-bottom: 2px;
+            }
+            .footer-socials a {
+              color: #00ffd0;
+              font-size: 1.7rem;
+              transition: color 0.2s, transform 0.2s;
+              border-radius: 50%;
+              padding: 7px;
+              background: rgba(0,255,208,0.08);
+              border: 2px solid transparent;
+            }
+            .footer-socials a:hover {
+              color: #222;
+              background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
+              border-color: #00ffd0;
+              transform: scale(1.13) translateY(-3px);
+            }
+            .footer-links {
+              display: flex;
+              gap: 18px;
+              margin-bottom: 2px;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+            .footer-links a {
+              color: #00ffd0;
+              text-decoration: none;
+              font-size: 1.05rem;
+              font-family: 'Rajdhani', 'Montserrat', sans-serif;
+              transition: color 0.2s;
+              padding: 2px 8px;
+              border-radius: 8px;
+            }
+            .footer-links a:hover {
+              color: #222;
+              background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
+            }
+            .footer-copy {
+              font-size: 0.98rem;
+              color: #b8fff6;
+              margin-top: 8px;
+              letter-spacing: 1px;
+              text-align: center;
+              opacity: 0.85;
+            }
+            @media (max-width: 600px) {
+              .footer-content { gap: 10px; }
+              .footer-logo { font-size: 1.3rem; }
+              .footer-socials { gap: 12px; }
+              .footer-links { gap: 10px; }
+              .footer { padding: 24px 0 10px 0; }
+            }
+          </style>
+        </footer></footer>-->
+      </body>
+    </html>
