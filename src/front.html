@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="front.css" />
+    <link rel="stylesheet" href="./styles/front.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -48,8 +48,13 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <script src="script.js"></script>
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <button class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
           <li class="glass-interactive" style="color:#00ffd0">
             <a href="#about" style="color:#00ffd0">About</a>
           </li>
@@ -57,13 +62,13 @@
             <a href="#skills" style="color:#00ffd0">Skills</a>
           </li>
           <li class="glass-interactive" style="color:#00ffd0">
-            <a href="#project" style="color:#00ffd0">projects</a>
+            <a href="#project" style="color:#00ffd0">Projects</a>
           </li>
           <li class="glass-interactive" style="color:#00ffd0">
-            <a href="#services" style="color:#00ffd0">services</a>
+            <a href="#services" style="color:#00ffd0">Services</a>
           </li>
           <li class="glass-interactive" style="color:#00ffd0">
-            <a href="#contact" style="color:#00ffd0">contact</a>
+            <a href="#contact" style="color:#00ffd0">Contact</a>
           </li>
         </ul>
       </nav>
@@ -71,7 +76,7 @@
       <main class="main-content">
         <div>
           <div class="profile-pic" style="animation: floatProfile 2.5s ease-in-out infinite alternate;">
-            <img src="kdprofile.jpg" alt="Profile Picture" />
+            <img src="../public/images/kdprofile.jpg" alt="Profile Picture" />
           </div>
         </div>
         <style>
@@ -83,14 +88,14 @@
 
         <div class="intro">
             
-          <h1 class="typewriter" style="font-size: 38px;">Hello, my name is <span class="name">Kanak Dhiman</span></h1>
+          <h1 class="typewriter" style="font-size: 38px;">Hello, this is <span class="name">Kanak</span></h1>
           <h2 class="typewriter-text" style="font-size: 34px; color: #d3d9dd;"></h2>
           <script>
             const ed = document.querySelector(".typewriter-text");
             const phrases = [
-                " I am a Web Developer & Designer",
-              "I design sleek, animated websites",
-              "Let’s create something extraordinary",
+               "I am an AI & Machine Learning Developer",
+"I build intelligent systems and analyze data",
+"Turning data into powerful AI solutions"
             ];
 
             let phraseIndex = 0;
@@ -126,14 +131,7 @@
           </h2>
 
           <p class="slide-in-onload">
-            A Computer Science and Engineering student with a passion for
-            technology, creativity, and continuous learning. I’m currently
-            focused on web development and UI/UX design using Figma. Alongside,
-            I’ve recently started my journey into Artificial Intelligence and
-            Machine Learning, exploring how intelligent systems work and how
-            they can solve real-world problems. I enjoy building meaningful
-            digital experiences and love diving into new challenges that help me
-            grow as a developer and designer.
+            Hi, I'm Kanak Dhiman, a Computer Science Engineering student passionate about Artificial Intelligence, Machine Learning, and Data Analytics. I enjoy building intelligent systems, analyzing data, and creating solutions that combine AI with real-world applications. My work spans machine learning, deep learning, natural language processing, computer vision, and data analysis.
           </p>
           <script>
             window.addEventListener("pageshow", () => {
@@ -156,72 +154,134 @@
       </aside>
       <div class="skill-categories">
         <div class="skill-box">
-          <h2>Frontend Development</h2>
+          <h2>AI / Machine Learning</h2>
           <div class="skill-items">
-            <div class="skill" class="particle">
-              <img
-                src="360_F_578113446_j72wZX7u698eoV50XXmkLMH7gGuNhpVB.jpg"
-                alt="HTML"
-              />HTML
+            <div class="skill">
+              <span>Artificial Intelligence</span>
             </div>
-            <div class="skill" class="particle">
-              <img
-                src="css.jpg"
-                alt="CSS3 logo in blue and white shield shape with stylized number 3, representing web styling technology, on a transparent background"
-              />CSS
+            <div class="skill">
+              <span>Machine Learning</span>
             </div>
-            <div class="skill" class="particle">
-              <img src="jslogo.png" alt="JavaScript" />JavaScript
+            <div class="skill">
+              <span>Deep Learning</span>
             </div>
-            <div class="skill" class="particle">
-              <img src="bootstrp.png" alt="Bootstrap" />Bootstrap
+            <div class="skill">
+              <span>NLP</span>
             </div>
-            <div class="skill" class="particle">
-              <img src="tailwind.png" alt="Tailwind CSS" />Tailwind CSS
+            <div class="skill">
+              <span>Transformers</span>
             </div>
-            <div class="skill" class="particle">
-              <img src="react.svg" alt="React.js" />React.js
+            <div class="skill">
+              <span>LLMs</span>
+            </div>
+            <div class="skill">
+              <span>RAG</span>
+            </div>
+            <div class="skill">
+              <span>Generative AI</span>
+            </div>
+            <div class="skill">
+              <span>Agentic AI</span>
+            </div>
+            <div class="skill">
+              <span>CNN</span>
+            </div>
+            <div class="skill">
+              <span>ANN</span>
+            </div>
+            <div class="skill">
+              <span>R-CNN</span>
+            </div>
+            <div class="skill">
+              <span>Object Detection</span>
             </div>
           </div>
         </div>
 
         <div class="skill-box">
-          <h2>Backend Development</h2>
+          <h2>Data Analysis</h2>
           <div class="skill-items">
             <div class="skill">
-              <img src="nodejs.png" alt="Node.js" />Node.js
+              <span>Data Analysis</span>
             </div>
             <div class="skill">
-              <img src="expressjs.png" alt="Express.js" />Express.js
+              <span>EDA</span>
+            </div>
+            <div class="skill">
+              <span>Data Cleaning</span>
+            </div>
+            <div class="skill">
+              <span>Feature Engineering</span>
+            </div>
+            <div class="skill">
+              <span>Pandas</span>
+            </div>
+            <div class="skill">
+              <span>NumPy</span>
+            </div>
+            <div class="skill">
+              <span>Matplotlib</span>
+            </div>
+            <div class="skill">
+              <span>Seaborn</span>
             </div>
           </div>
         </div>
 
         <div class="skill-box">
-          <h2>Database</h2>
-          <div class="skill-items">
-            <div class="skill">
-              <img src="mongodb.jpg" alt="MongoDB" />MongoDB
-            </div>
-            <div class="skill">
-              <img src="mongoose.png" alt="Mongoose" />Mongoose
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-box">
-          <h2>Designing Tools</h2>
-          <div class="skill-items">
-            <div class="skill"><img src="figma.png" alt="Figma" />Figma</div>
-            <div class="skill"><img src="canva.jpg" alt="Canva" />Canva</div>
-          </div>
-        </div>
-     <!--div class="skill-box">
           <h2>Programming</h2>
           <div class="skill-items">
-            <div class="skill"><img src="python.jpg" alt="Python" />Python</div>
+            <div class="skill">
+              <span>Python</span>
+            </div>
+            <div class="skill">
+              <span>C++</span>
+            </div>
+            <div class="skill">
+              <span>Java</span>
+            </div>
+            <div class="skill">
+              <span>C</span>
+            </div>
           </div>
-        </div>--></div>
+        </div>
+
+        <div class="skill-box">
+          <h2>Web Development</h2>
+          <div class="skill-items">
+            <div class="skill">
+              <span>Frontend: html, css js</span>
+            </div>
+            <div class="skill">
+              <span>backend: Python, Node.js, Express.js</span>
+            </div>
+            <div class="skill">
+              <span>db:mongodb, PostgreSQL</span>
+            </div>
+            <!-- <div class="skill">
+              <span>Full Stack</span>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h2>Tools</h2>
+          <div class="skill-items">
+            <div class="skill">
+              <span>Git</span>
+            </div>
+            <div class="skill">
+              <span>GitHub</span>
+            </div>
+            <div class="skill">
+              <span>Figma</span>
+            </div>
+            <div class="skill">
+              <span>Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+     </div>
     </section>
       
     <!--<section class="projects">
@@ -257,7 +317,7 @@
             <div class="dynamic-slider">
               <div class="dynamic-slider-track">
               <div class="dynamic-slide">
-                <img src="booksetu2.jpg" alt="BookSetu" />
+                <img src="../public/images/booksetu2.jpg" alt="BookSetu" />
                 <div class="dynamic-info">
                 <h2>BookSetu</h2>
                 <p>BookSetu is a student-friendly platform that makes buying, selling, and renting books easier than ever.</p>
@@ -265,7 +325,7 @@
                 </div>
               </div>
               <div class="dynamic-slide">
-                <img src="pf.jpg" alt="Portfolio Builder" />
+                <img src="../public/images/pf.jpg" alt="Portfolio Builder" />
                 <div class="dynamic-info">
                 <h2>Portfolio Builder</h2>
                 <p>A dynamic portfolio creator using html css js gsap and more features like it.</p>
@@ -274,7 +334,7 @@
                 </div>
               </div>
               <div class="dynamic-slide">
-                <img src="uifgma.jpg" alt="Figma UI" />
+                <img src="../public/images/uifgma.jpg" alt="Figma UI" />
                 <div class="dynamic-info">
                 <h2>Figma UI</h2>
                 <p>UI of a financial website by using Figma</p>
@@ -282,7 +342,7 @@
                 </div>
               </div>
               <div class="dynamic-slide">
-                <img src="devlabs.jpg" alt="DevLabs UI" />
+                <img src="../public/images/devlabs.jpg" alt="DevLabs UI" />
                 <div class="dynamic-info">
                 <h2>DevLabs UI</h2>
                 <p>User interface of a website <b>DevLabs</b></p>
@@ -515,37 +575,48 @@
     <section class="services" id="services">
       <h1 class="services-heading">My Services</h1>
       <div class="service-container">
-      <!-- Web Designing -->
+      <!-- AI/ML Developer -->
       <div class="service-box">
-        <img
-        src="webdesigninglogo.png"
-        alt="Web Designing"
-        style="color: rgba(0, 255, 127, 0.8)"
-        />
-        <h2>Web Designing</h2>
+        <i class="fa-solid fa-brain"></i>
+        <h2>AI / Machine Learning Developer</h2>
         <p>
-        Crafting visually stunning and highly functional websites with
-        modern design principles.
+        Building ML and deep learning models for real-world applications.
         </p>
       </div>
 
-      <!-- UI/UX Designing -->
+      <!-- Data Analyst -->
       <div class="service-box">
-        <img src="figmaservice.jpg" alt="">
-        <h2>UI/UX Designing</h2>
+        <i class="fa-solid fa-chart-bar"></i>
+        <h2>Data Analyst</h2>
         <p>
-        Creating intuitive and engaging user experiences with a focus on
-        usability and aesthetics.
+        Performing data analysis, EDA, visualization, and extracting insights.
         </p>
       </div>
 
-      <!-- Logo Designing -->
+      <!-- AI Research & LLM Applications -->
       <div class="service-box">
-        <img src="logodesigner.jpg" alt="Logo Designing" />
-        <h2>Logo Designing</h2>
+        <i class="fa-solid fa-flask-vial"></i>
+        <h2>AI Research & LLM Applications</h2>
         <p>
-        Designing unique and memorable brand identities that leave a lasting
-        impression.
+        Working with LLMs, Transformers, and RAG-based AI systems.
+        </p>
+      </div>
+
+      <!-- Computer Vision Developer -->
+      <div class="service-box">
+        <i class="fa-solid fa-eye"></i>
+        <h2>Computer Vision Developer</h2>
+        <p>
+        Object detection, CNN models, and image-based AI solutions.
+        </p>
+      </div>
+
+      <!-- Full Stack Developer -->
+      <div class="service-box">
+        <i class="fa-solid fa-code"></i>
+        <h2>Full Stack Developer</h2>
+        <p>
+        Developing responsive web applications using modern web technologies.
         </p>
       </div>
       </div>
