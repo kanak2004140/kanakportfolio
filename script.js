@@ -16,7 +16,50 @@
             });
         }
     });
+
+    // Hamburger Menu Toggle
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (hamburgerMenu && navMenu) {
+      hamburgerMenu.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const navLinks = navMenu.querySelectorAll("a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          hamburgerMenu.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".navbar")) {
+          hamburgerMenu.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      });
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 });
+
 document.querySelector(".glass-interactive").addEventListener("mousemove", (e) => {
     gsap.to(".glass-interactive", {
         x: e.clientX / 20,
